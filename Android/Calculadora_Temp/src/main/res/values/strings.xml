@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Calculadora_Engenharia</string>
+    <string name="app_titulo_view">CALCULADORA ENG</string>
+    <string name="spinner_titulo_view">Equação</string>
+    <string-array name="equacao_spinner">
+        <item>Dilatação Termica</item>
+        <item>Capacidade Termica</item>
+    </string-array>
+    <string name="a_titulo_view">Variavel_1:</string>
+    <string name="a_unidade_view">Unidade_1</string>
+    <string name="b_titulo_view">Variavel_2:</string>
+    <string name="b_unidade_view">Unidade_2</string>
+    <string name="c_titulo_view">Variavel_3:</string>
+    <string name="c_unidade_view">Unidade_3</string>
+    <string name="d_titulo_view">Variavel_4:</string>
+    <string name="d_unidade_view">Unidade_4</string>
+    <string name="e_titulo_view">Variavel_5:</string>
+    <string name="e_unidade_view">Unidade_5</string>
+    <string name="calcular_botao">Calcular</string>
+    <string name="resultado_titulo_view">Resultado</string>
+    <string name="radio_titulo_view">Unidade :</string>
+    <string name="radio_1">°C</string>
+    <string name="radio_2">°F</string>
+    <string name="radio_3">K</string>
+    <string name="analise_titulo_view">ΔT =</string>
+    <string name="analise_unidade_view">°C</string>
+    <string name="analise_view">Pressione Calcular</string>
+</resources>

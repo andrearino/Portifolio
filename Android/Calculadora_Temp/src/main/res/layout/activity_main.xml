@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <!-- Elevação -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/design_default_color_primary" />
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/textview_app_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/design_default_color_primary"
+        android:gravity="center"
+        android:text="@string/app_titulo_view"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+    <!-- Descrição Seleção de Equação e Seleção de Resultado Fracionário -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Descrição Seleção de Equação -->
+        <TextView
+            android:id="@+id/textview_spinner_titulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/design_default_color_secondary"
+            android:gravity="center"
+            android:text="@string/spinner_titulo_view"
+            android:textColor="#5E35B1" />
+
+        <Spinner
+            android:id="@+id/spinner_equacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="@color/white"
+            android:entries="@array/equacao_spinner"
+            android:gravity="center"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <!-- Exibe a Equação Selecionada -->
+    <TextView
+        android:id="@+id/textview_eaqucao_selecionada"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/design_default_color_primary"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <!-- Lista de descrição do Campo A e Campo de Inserção do Valor de A  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <!-- Lista de descrição do Campo A -->
+        <TextView
+            android:id="@+id/textview_a_titulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="@string/a_titulo_view"
+            android:textColor="@color/black" />
+
+        <!-- Campo de Inserção do Valor de A -->
+        <EditText
+            android:id="@+id/edittext_a"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:background="@color/white"
+            android:gravity="center"
+            android:inputType="number"
+            android:textColor="@color/black" />
+
+        <!-- Lista de descrição do Campo A -->
+        <TextView
+            android:id="@+id/textview_a_unidade"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="@string/a_unidade_view"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <!-- Lista de descrição do Campo B e Campo de Inserção do Valor de B  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/textview_b_titulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="@string/b_titulo_view"
+            android:textColor="@color/black" />
+
+        <!-- Campo de Inserção do Valor de B -->
+        <EditText
+            android:id="@+id/edittext_b"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:background="@color/white"
+            android:gravity="center"
+            android:inputType="number"
+            android:textColor="@color/black" />
+
+        <!-- Lista de descrição do Campo B -->
+        <TextView
+            android:id="@+id/textview_b_unidade"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="@string/b_unidade_view"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <!-- Lista de descrição do Campo C e Campo de Inserção do Valor de C  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/textview_c_titulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="@string/c_titulo_view"
+            android:textColor="@color/black" />
+
+        <!-- Campo de Inserção do Valor de C -->
+        <EditText
+            android:id="@+id/edittext_c"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:background="@color/white"
+            android:gravity="center"
+            android:inputType="number"
+            android:textColor="@color/black" />
+        <!-- Lista de descrição do Campo C -->
+        <TextView
+            android:id="@+id/textview_c_unidade"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="@string/c_unidade_view"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <!-- Lista de descrição do Campo D e Campo de Inserção do Valor de D  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/textview_d_titulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="@string/d_titulo_view"
+            android:textColor="@color/black" />
+
+        <!-- Campo de Inserção do Valor de D -->
+        <EditText
+            android:id="@+id/edittext_d"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:background="@color/white"
+            android:gravity="center"
+            android:inputType="number"
+            android:textColor="@color/black" />
+        <!-- Lista de descrição do Campo D -->
+        <TextView
+            android:id="@+id/textview_d_unidade"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="@string/d_unidade_view"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <!-- Lista de descrição do Campo E e Campo de Inserção do Valor de E  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <!-- Lista de descrição do Campo E -->
+        <TextView
+            android:id="@+id/textview_e_titulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="@string/e_titulo_view"
+            android:textColor="@color/black" />
+
+        <!-- Campo de Inserção do Valor de E -->
+        <EditText
+            android:id="@+id/edittext_e"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:background="@color/white"
+            android:gravity="center"
+            android:inputType="number"
+            android:textColor="@color/black" />
+        <!-- Lista de descrição do Campo E -->
+        <TextView
+            android:id="@+id/textview_e_unidade"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="@string/e_unidade_view"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <!-- Titulo para Exibição dos Resultados -->
+    <TextView
+        android:id="@+id/textview_titulo_resultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/design_default_color_primary"
+        android:gravity="center"
+        android:text="@string/resultado_titulo_view"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <!-- Título de descrição de Análise e Texto com Análise  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Título de descrição de Análise  -->
+        <TextView
+            android:id="@+id/textview_radio_titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="right"
+            android:text="@string/radio_titulo_view"
+            android:textColor="@color/black" />
+
+        <!-- Texto com Análise  -->
+        <RadioGroup
+            android:id="@+id/RadioGroup_selecao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radio_1"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:onClick="onRadioButtonClick"
+                android:text="@string/radio_1" />
+
+            <RadioButton
+                android:id="@+id/radio_2"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:onClick="onRadioButtonClick"
+                android:text="@string/radio_2" />
+
+            <RadioButton
+                android:id="@+id/radio_3"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:onClick="onRadioButtonClick"
+                android:text="@string/radio_3" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <!-- Área branca para alinhar com a parte de baixo do view -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" />
+
+    <!-- Botão para Calcular -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@color/white" />
+
+        <Button
+            android:id="@+id/button_calcular"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@color/design_default_color_secondary"
+            android:gravity="center_horizontal"
+            android:onClick="calcular_botao"
+            android:text="@string/calcular_botao"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@color/white" />
+    </LinearLayout>
+
+    <!-- Título de descrição de Análise e Texto com Análise  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Título de descrição de Análise  -->
+        <TextView
+            android:id="@+id/textview_analise_titulo"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="@string/analise_titulo_view"
+            android:textColor="@color/black" />
+
+        <!-- Texto com Análise  -->
+        <TextView
+            android:id="@+id/textview_analise"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="2"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="@string/analise_view"
+            android:textColor="@color/black" />
+
+        <!-- Título de descrição de Análise  -->
+        <TextView
+            android:id="@+id/textview_analise_unidade"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="@string/analise_unidade_view"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/design_default_color_primary" />
+
+</LinearLayout>
